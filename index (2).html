@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Siete hábitos simples para ordenar tu día y ser más productivo, con temporizador de enfoque y lista diaria.">
+<meta property="og:title" content="Menos ruido, más hecho">
+<meta property="og:description" content="Siete hábitos para un día más productivo.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<title>Menos ruido, más hecho: hábitos para un día productivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F2FF;--ink:#12123A;--blue:#3A3AFF;--on-blue:#fff;--coral:#FF5C7A;--accent:#B3123F;--card:#fff;--line:#d9d9f5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E0E2A;--ink:#EDEDFF;--blue:#4A4AD8;--accent:#FF8FA6;--card:#191948;--line:#2e2e6b}}
+:root[data-theme="dark"]{--bg:#0E0E2A;--ink:#EDEDFF;--blue:#4A4AD8;--accent:#FF8FA6;--card:#191948;--line:#2e2e6b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.55;font-size:17px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 40px}
+h1{font-size:clamp(3rem,13vw,7rem);line-height:.92;font-weight:800;letter-spacing:-.04em;margin:0 0 20px}
+h1 span{color:var(--accent);display:block}
+.lead{max-width:34rem;font-size:1.2rem;margin:0}
+.timer{background:var(--blue);color:var(--on-blue);border-radius:28px;padding:28px;margin:36px 0 0;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.time{font-size:clamp(3.5rem,16vw,6rem);font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.timer p{margin:6px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+button{font:inherit;font-weight:600;cursor:pointer;border:2px solid currentColor;background:transparent;color:inherit;border-radius:999px;padding:10px 20px}
+button.main{background:var(--coral);border-color:var(--coral);color:#12123A}
+button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+h2{font-size:clamp(1.8rem,6vw,2.6rem);letter-spacing:-.03em;margin:64px 0 18px;line-height:1.05}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-size:1.25rem;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.6rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 18px;max-width:38rem}
+.check{background:var(--card);border-radius:24px;padding:24px;border:1px solid var(--line)}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--blue);margin-top:2px;flex:none}
+.check input:checked+span{text-decoration:line-through;opacity:.55}
+.bar{height:12px;background:var(--line);border-radius:99px;overflow:hidden;margin:16px 0 8px}
+.bar i{display:block;height:100%;width:0;background:var(--coral);transition:width .3s}
+#msg{margin:0;font-weight:600}
+footer{padding:64px 0 48px;opacity:.7;font-size:.95rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.timer button.main{color:#12123A}
+body{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%233A3AFF' stroke='white' stroke-width='2'/%3E%3Cpath d='M16 8v8l5 3' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 16 16,auto}
+[hidden]{display:none!important}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,textarea:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;z-index:20}.skip:focus{left:8px}
+.f label{display:block;font-weight:600;margin:14px 0 6px}
+.f input[type=email],.f textarea{width:100%;font:inherit;padding:12px;border-radius:12px;border:2px solid var(--ink);background:var(--card);color:var(--ink)}
+.f .c{display:flex;gap:12px;font-weight:400}.f .c input{width:22px;height:22px;accent-color:var(--blue);flex:none;margin-top:3px}
+.f button{margin-top:16px;background:var(--ink);color:var(--bg)}
+.ck{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:760px;margin:auto;background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:16px;z-index:9;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.ck p{margin:0;flex:1 1 280px;font-size:.95rem}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px}
+footer button{border:0;padding:0;text-decoration:underline;color:var(--accent);font-weight:400;border-radius:4px}
+footer{opacity:1!important}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="wrap">
+<header>
+<h1>Menos ruido.<span>Más hecho.</span></h1>
+<p class="lead">Siete hábitos sencillos y orientativos para ordenar tu día. Empieza ahora mismo con un bloque de enfoque de 25 minutos.</p>
+<div class="timer" role="timer" aria-label="Temporizador de enfoque">
+<div><div class="time" id="t" aria-live="off">25:00</div><p id="mode">Bloque de enfoque</p></div>
+<div class="btns">
+<button class="main" id="go">Empezar</button>
+<button id="brk">Pausa 5 min</button>
+<button id="rst">Reiniciar</button>
+</div>
+</div>
+</header>
+
+<section id="main" tabindex="-1">
+<h2>Los 7 hábitos</h2>
+<details open><summary>Elige tus 3 prioridades</summary><p>Antes de abrir el correo o el celular, escribe las tres cosas que harían que hoy valga la pena. Todo lo demás es secundario. Una lista corta se cumple; una lista de 20 paraliza.</p></details>
+<details><summary>Trabaja en bloques de 25 minutos</summary><p>La técnica Pomodoro: 25 minutos de enfoque total y 5 de descanso. Después de cuatro bloques, toma una pausa larga de 15 a 30 minutos. El temporizador de arriba te sirve para empezar.</p></details>
+<details><summary>Una sola tarea a la vez</summary><p>Cambiar de tarea con frecuencia suele restar concentración. Termina o pausa una actividad de forma consciente antes de pasar a la siguiente.</p></details>
+<details><summary>Regla de los 2 minutos</summary><p>Si algo te toma menos de dos minutos (responder un mensaje, guardar un documento), hazlo en el momento. Si toma más, agéndalo y sácalo de tu cabeza.</p></details>
+<details><summary>Aleja las distracciones</summary><p>Pon el celular boca abajo o en otra habitación, silencia las notificaciones y cierra las pestañas que no necesitas. Un entorno con menos interrupciones suele facilitar el enfoque.</p></details>
+<details><summary>Cuida tu cuerpo</summary><p>Dormir entre 7 y 9 horas, tomar agua y moverte unos minutos cada hora suelen ayudar a mantener la concentración, aunque cada persona es distinta.</p></details>
+<details><summary>Cierra el día en 5 minutos</summary><p>Revisa qué lograste, anota lo pendiente y define la primera tarea de mañana. Así es más fácil desconectar y empezar con claridad el día siguiente.</p></details>
+</section>
+
+<section>
+<h2>Tu día de hoy</h2>
+<div class="check" id="list">
+<label><input type="checkbox"><span>Definí mis 3 prioridades</span></label>
+<label><input type="checkbox"><span>Hice un bloque de enfoque sin distracciones</span></label>
+<label><input type="checkbox"><span>Dejé el celular lejos durante el trabajo</span></label>
+<label><input type="checkbox"><span>Tomé agua y me moví un rato</span></label>
+<label><input type="checkbox"><span>Cerré el día revisando mis pendientes</span></label>
+<div class="bar" aria-hidden="true"><i id="fill"></i></div>
+<p id="msg">0 de 5 completados</p>
+</div>
+</section>
+
+<section>
+<h2>Escríbenos</h2>
+<form class="f" action="mailto:diego.palma.gomez118@gmail.com" method="post" enctype="text/plain">
+<label for="em">Tu correo (obligatorio)</label><input id="em" name="correo" type="email" required autocomplete="email">
+<label for="ms">Tu mensaje (obligatorio)</label><textarea id="ms" name="mensaje" rows="4" required></textarea>
+<label class="c" for="cn"><input id="cn" name="consentimiento" type="checkbox" required><span>Acepto que se use mi correo y mi mensaje solo para responderme, según la <a href="#privacidad" data-open="privacidad">política de privacidad</a> (obligatorio).</span></label>
+<button type="submit">Enviar</button>
+</form>
+</section>
+<section id="legal">
+<h2>Información legal</h2>
+<details id="privacidad"><summary>Política de privacidad</summary><p><b>Responsable:</b> Diego Portillo Palma, diego.palma.gomez118@gmail.com. <b>Datos que se tratan:</b> solo tu correo y tu mensaje si usas el formulario, y nada más. <b>Finalidad:</b> responderte. <b>Base legal:</b> tu consentimiento, que puedes retirar cuando quieras. <b>Conservación:</b> el tiempo necesario para atender tu consulta. El formulario abre tu aplicación de correo; esta web no guarda esos datos. <b>Derechos:</b> acceso, rectificación, supresión, oposición, limitación y portabilidad, escribiendo al correo indicado. Puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p></details>
+<details id="cookies"><summary>Política de cookies y almacenamiento</summary><p>Esta web no usa cookies propias. Usa el almacenamiento local de tu navegador solo para dos cosas necesarias: recordar tu lista del día y recordar tu elección sobre cookies. Ahora mismo no hay analítica ni seguimiento activo. Si se añadiera, solo se cargaría si aceptas "Permitir analítica", y podrás cambiar la decisión desde el enlace del pie de página.</p></details>
+<details id="terceros"><summary>Integraciones de terceros</summary><p>La web carga la tipografía desde Google Fonts, por lo que Google recibe tu dirección IP al abrirla. No hay redes sociales, publicidad ni otros servicios externos.</p></details>
+<details id="terminos"><summary>Términos y condiciones</summary><p>El contenido es informativo y orientativo: no es consejo médico, psicológico ni profesional, y no garantiza resultados. Úsalo bajo tu propia responsabilidad. Los textos y el diseño pertenecen a Diego Portillo Palma. El editor no responde de daños derivados del uso de la información, salvo lo que establezca la ley. Legislación aplicable: España.</p></details>
+<details id="reembolsos"><summary>Política de reembolso</summary><p>Esta web no vende productos ni servicios y no hay pagos, por lo que no hay reembolsos. Si algún día se ofreciera algo de pago, se publicarán antes las condiciones de devolución y el derecho de desistimiento.</p></details>
+<details id="resenas"><summary>Reseñas y afirmaciones</summary><p>Esta web no publica reseñas ni testimonios, y no hay valoraciones falsas ni inventadas. Los consejos son técnicas de uso común presentadas como orientación, no como promesas de resultados.</p></details>
+</section>
+<div class="ck" id="ck" role="region" aria-label="Aviso de cookies" hidden>
+<p>Guardamos en tu navegador solo tu lista y esta elección. No hay analítica activa. <a href="#cookies" data-open="cookies">Más información</a></p>
+<div class="btns"><button id="ckno">Solo necesarias</button><button id="ckyes" class="main">Permitir analítica</button></div>
+</div>
+<footer>
+<p>Empieza pequeño y repite todos los días.</p>
+<nav aria-label="Información legal"><a href="#privacidad" data-open="privacidad">Privacidad</a><a href="#cookies" data-open="cookies">Cookies</a><a href="#terminos" data-open="terminos">Términos</a><a href="#reembolsos" data-open="reembolsos">Reembolsos</a><a href="#terceros" data-open="terceros">Terceros</a><button id="ckset" type="button">Preferencias de cookies</button></nav>
+</footer>
+</div>
+
+<script>
+(function(){
+var t=document.getElementById('t'),mode=document.getElementById('mode'),go=document.getElementById('go');
+var len=1500,left=len,timer=null;
+function show(){var m=Math.floor(left/60),s=left%60;t.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;document.title=(timer?t.textContent+' · ':'')+'Menos ruido, más hecho'}
+function stop(){clearInterval(timer);timer=null;go.textContent='Empezar'}
+function set(sec,label){stop();len=left=sec;mode.textContent=label;show()}
+go.onclick=function(){
+if(timer){stop();go.textContent='Continuar';return}
+go.textContent='Pausar';
+timer=setInterval(function(){left--;if(left<=0){left=0;stop();mode.textContent='¡Listo! Buen trabajo';go.textContent='Empezar'}show()},1000)};
+document.getElementById('rst').onclick=function(){set(1500,'Bloque de enfoque')};
+document.getElementById('brk').onclick=function(){set(300,'Pausa: estírate y toma agua')};
+
+var boxes=document.querySelectorAll('#list input'),fill=document.getElementById('fill'),msg=document.getElementById('msg');
+var key='prod-'+new Date().toDateString();
+try{var saved=JSON.parse(localStorage.getItem(key)||'[]');boxes.forEach(function(b,i){b.checked=!!saved[i]})}catch(e){}
+function upd(){var n=0,arr=[];boxes.forEach(function(b){arr.push(b.checked);if(b.checked)n++});
+fill.style.width=(n/boxes.length*100)+'%';
+msg.textContent=n===boxes.length?'¡Día completo! Lo lograste.':n+' de '+boxes.length+' completados';
+try{localStorage.setItem(key,JSON.stringify(arr))}catch(e){}}
+boxes.forEach(function(b){b.onchange=upd});upd();
+var ck=document.getElementById('ck'),c=null;
+try{c=localStorage.getItem('consent')}catch(e){}
+function loadAnalytics(){/* El script de analítica iría aquí y solo se ejecuta con consentimiento */}
+if(c==='yes')loadAnalytics();
+if(!c)ck.hidden=false;
+function pick(v){try{localStorage.setItem('consent',v)}catch(e){}ck.hidden=true;if(v==='yes')loadAnalytics()}
+document.getElementById('ckno').onclick=function(){pick('no')};
+document.getElementById('ckyes').onclick=function(){pick('yes')};
+document.getElementById('ckset').onclick=function(){ck.hidden=false;document.getElementById('ckno').focus()};
+document.querySelectorAll('[data-open]').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById(a.getAttribute('data-open'));if(d)d.open=true})});
+})();
+</script>
+</body>
+</html>
